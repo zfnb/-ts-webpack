@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #root {
+            display: flex;
+            justify-content: center;
+        }
+
+        #panel {
+            background-color: #000000;
+            position: relative;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        #next {
+            position: relative;
+            background-color: #eee;
+        }
+
+        #score {
+            color: #f80;
+            font-size: 20px;
+            font-weight: bold;
+            /*width: 100px;*/
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            background-color: #ccc;
+            box-shadow: 3px 4px 2px #888;
+        }
+
+        #title {
+            margin-top: 130px;
+            font-weight: bold;
+        }
+
+        #msg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, .3);
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        #msg p {
+            border: 2px solid #ccc;
+            padding: 5px;
+            background-color: #ff5500;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <div id="panel">
+            <div id="msg">
+                <p>游戏暂停</p>
+            </div>
+            <!-- /.msg -->
+        </div>
+        <div id="tip">
+            <div class="wrapper">
+                <div id="next"></div>
+            </div>
+            <!-- /.wrapper -->
+            <div id="score">计分器：0</div>
+            <div id="title">
+                <p>空格 开始/暂停/恢复</p>
+                <p>← 左移</p>
+                <p>→ 右移</p>
+                <p>↑ 选择方块</p>
+                <p>↓ 下落加速</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
